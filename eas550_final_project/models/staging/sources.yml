@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: raw_supply_chain
+    description: "Raw supply chain data uploaded from CSVs"
+    schema: public
+    tables:
+      - name: orders
+      - name: products
+      - name: customers
+      - name: order_items
