@@ -123,20 +123,20 @@ jobs:
       - name: Write dbt profiles.yml
         run: |
           mkdir -p .dbt
-          cat > .dbt/profiles.yml << EOF
-          eas550:
-            target: ci
-            outputs:
-              ci:
-                type: postgres
-                host: "{{ env_var('PGHOST') }}"
-                port: 5432
-                user: "{{ env_var('PGUSER') }}"
-                password: "{{ env_var('PGPASSWORD') }}"
-                dbname: "{{ env_var('PGDATABASE') }}"
-                schema: public
-                threads: 4
-          EOF
+          cat > eas550_final_project/profiles.yml << 'EOF'
+eas550_final_project:
+  target: ci
+  outputs:
+    ci:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: ci_user
+      password: ci_password
+      dbname: eas550_db
+      schema: public
+      threads: 4
+EOF
 
       - name: Install dbt-postgres
         run: pip install dbt-postgres
