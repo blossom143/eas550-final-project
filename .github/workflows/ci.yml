@@ -86,7 +86,7 @@ jobs:
       PGPASSWORD: npg_aUIEJS42AWfL
 
       # dbt profile / target (adjust if your profiles.yml uses different names)
-      DBT_PROFILES_DIR: ${{ github.workspace }}/eas550_final_project
+      DBT_PROFILES_DIR: ${{ github.workspace }}/hiii/eas550_final_project
 
     steps:
       - name: Checkout code
