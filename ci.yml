@@ -66,9 +66,9 @@ jobs:
       postgres:
         image: postgres:16
         env:
-          POSTGRES_DB: eas550_db
-          POSTGRES_USER: ci_user
-          POSTGRES_PASSWORD: ci_password
+          POSTGRES_DB: supply_chain
+          POSTGRES_USER: neondb_owner
+          POSTGRES_PASSWORD: npg_aUIEJS42AWfL
         ports:
           - 5432:5432
         options: >-
