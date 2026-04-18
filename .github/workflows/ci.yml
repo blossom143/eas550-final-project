@@ -86,7 +86,7 @@ jobs:
       PGPASSWORD: npg_aUIEJS42AWfL
 
       # dbt profile / target (adjust if your profiles.yml uses different names)
-      DBT_PROFILES_DIR: ${{ github.workspace }}/hiii/eas550_final_project
+      DBT_PROFILES_DIR: ${{ github.workspace }}/eas550_final_project
 
     steps:
       - name: Checkout code
@@ -141,12 +141,14 @@ jobs:
       - name: Install dbt-postgres
         run: pip install dbt-postgres
 
-      - name: dbt deps (install packages)
+      - name: dbt deps
+        working-directory: eas550_final_project
         run: dbt deps
 
       # Run dbt build for the target model and all its upstream dependencies.
       # --select +report_daily_revenue resolves the full DAG lineage.
       - name: dbt build
+        working-directory: eas550_final_project
         run: dbt build --select +report_daily_revenue
 
       # Upload dbt artifacts for debugging failed runs in the Actions UI
