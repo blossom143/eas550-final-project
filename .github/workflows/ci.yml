@@ -86,7 +86,7 @@ jobs:
       PGPASSWORD: ci_password
 
       # dbt profile / target (adjust if your profiles.yml uses different names)
-      DBT_PROFILES_DIR: ${{ github.workspace }}/.dbt
+      DBT_PROFILES_DIR: ${{ github.workspace }}/eas550_final_project
 
     steps:
       - name: Checkout code
