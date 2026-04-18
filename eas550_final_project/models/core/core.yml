@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fact_orders
+    description: "Central fact table for supply chain orders at the item level."
+    columns:
+      - name: order_item_id
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
