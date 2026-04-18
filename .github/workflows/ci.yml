@@ -81,7 +81,7 @@ jobs:
       # Match the variable names used in src/utils/db_connection.py
       PGHOST: ep-red-dawn-a4kwjzvp-pooler.us-east-1.aws.neon.tech
       PGPORT: 5432
-      PGDATABASE: suppy_chain
+      PGDATABASE: supply_chain
       PGUSER: neondb_owner
       PGPASSWORD: npg_aUIEJS42AWfL
 
